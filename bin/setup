@@ -1,0 +1,15 @@
+#!/bin/sh
+
+read -p "
+What is your Trello app key? (https://trello.com/app-key)
+> " trello_app_key
+
+read -p "
+What is your Trello token? (Generate a token from the prior link)
+> " trello_token
+
+trello_config:
+  APP_KEY: \"$trello_app_key\"
+  TOKEN: \"$trello_token\"
+redshift_config:
+  USERNAME: \"$redshift_username\"" >> .config
